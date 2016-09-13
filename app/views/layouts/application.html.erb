@@ -3,14 +3,15 @@
   <head>
     <title>Pinboard</title>
     <%= csrf_meta_tags %>
-
+    <meta name="viewport" content="width=device-width, initital-scale=1.0">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-	<%= link_to "Home", root_path %>
-	<%= link_to "About Us", about_path %>
-	<%= yield %>
+	<%= render 'layouts/header' %>
+  <div class="container">
+	     <%= yield %>
+  </div>
   </body>
 </html>
